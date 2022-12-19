@@ -16,3 +16,6 @@ rootProject.name = "Start android lessons"
 include ':app'
 include ':p0031firstproject'
 include ':p0041basicviews'
+include ':p0180constraintlayoutintro'
+include ':p0051layoutfiles'
+include ':p0061layouts'
