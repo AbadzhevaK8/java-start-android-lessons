@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
+
     final int MENU_RESET_ID = 1;
     final int MENU_QUIT_ID = 2;
 
@@ -27,7 +28,31 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     String oper = "";
 
+    // создание меню
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add(0, MENU_RESET_ID, 0, "Reset");
+        menu.add(0, MENU_QUIT_ID, 0, "Quit");
+        return super.onCreateOptionsMenu(menu);
+    }
 
+    // обработка нажатий на пункты меню
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case MENU_RESET_ID:
+                // очищаем поля
+                etNum1.setText("");
+                etNum2.setText("");
+                tvResult.setText("");
+                break;
+            case MENU_QUIT_ID:
+                // выход из приложения
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     /** Called when the activity is first created. */
     @Override
@@ -98,31 +123,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         tvResult.setText(num1 + " " + oper + " " + num2 + " = " + result);
     }
 
-    // создание меню
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add(0, MENU_RESET_ID, 0, "Reset");
-        menu.add(0, MENU_QUIT_ID, 0, "Quit");
-        return super.onCreateOptionsMenu(menu);
-    }
 
-    // обработка нажатий на пункты меню
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case MENU_RESET_ID:
-                // очищаем поля
-                etNum1.setText("");
-                etNum2.setText("");
-                tvResult.setText("");
-                break;
-            case MENU_QUIT_ID:
-                // выход из приложения
-                finish();
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
 }
 
