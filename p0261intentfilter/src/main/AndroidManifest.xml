@@ -9,14 +9,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StartAndroidLessons">
         <activity
-            android:name=".ActivityTime"
+            android:name=".ActivityDateEx"
+            android:label="Date extended"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
             <intent-filter>
-                <action android:name="ru.startandroid.intent.action.showtime"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
+                <action android:name="com.startandroid.intent.action.showdate" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityDate"
+            android:label="Date basic"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
+            <intent-filter>
+                <action android:name="com.startandroid.intent.action.showdate" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityTime"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
+            <intent-filter>
+                <action android:name="com.startandroid.intent.action.showtime" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
