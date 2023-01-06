@@ -9,12 +9,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StartAndroidLessons">
         <activity
-            android:name=".ActivityTwo"
-            android:exported="false"
-            android:theme="@android:style/Theme.Dialog">
+            android:name=".ActivityTime"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+            <intent-filter>
+                <action android:name="ru.startandroid.intent.action.showtime"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
