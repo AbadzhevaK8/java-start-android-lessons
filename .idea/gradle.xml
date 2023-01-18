@@ -11,6 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/myapplication" />
             <option value="$PROJECT_DIR$/p0031firstproject" />
             <option value="$PROJECT_DIR$/p0041basicviews" />
             <option value="$PROJECT_DIR$/p0051layoutfiles" />
@@ -42,6 +43,11 @@
             <option value="$PROJECT_DIR$/p0311simpleintents" />
             <option value="$PROJECT_DIR$/p0321simplebrowser" />
             <option value="$PROJECT_DIR$/p0331sharedpreferences" />
+            <option value="$PROJECT_DIR$/p0341simplesqlite" />
+            <option value="$PROJECT_DIR$/p0361sqlitequery" />
+            <option value="$PROJECT_DIR$/p0371sqliteinnerjoin" />
+            <option value="$PROJECT_DIR$/p0381sqlitetransaction" />
+            <option value="$PROJECT_DIR$/p0391sqliteonupgradedb" />
           </set>
         </option>
       </GradleProjectSettings>

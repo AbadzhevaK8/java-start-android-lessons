@@ -33,6 +33,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
         btnLoad = (Button) findViewById(R.id.btnLoad);
         btnLoad.setOnClickListener(this);
+
+        loadText();
     }
 
   @Override
@@ -62,5 +64,11 @@ public class MainActivity extends Activity implements OnClickListener {
     String savedText = sPref.getString(SAVED_TEXT, "");
     etText.setText(savedText);
     Toast.makeText(this, "Text loaded", Toast.LENGTH_SHORT).show();
+  }
+
+    @Override
+    protected void onDestroy() {
+      super.onDestroy();
+      saveText();
   }
 }
